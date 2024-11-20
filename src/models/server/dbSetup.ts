@@ -12,7 +12,7 @@ export default async function getOrCreateDB(){
     await databases.get(db)
     console.log("Database connection")
   } catch (error) {
-    console.log("Database not found, creating database", error)
+    console.log("Database not found, creating database:", error)
     try {
       await databases.create(db, db)
       console.log("database created")
